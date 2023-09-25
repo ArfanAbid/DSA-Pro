@@ -2,7 +2,7 @@
 using namespace std;
 
 //Imp Note:  When given no.s from range 1,N 
-// If given 1-N then apply Cyclic Sort like[20,24,23,22,21] ,[55,57,59,56,58]  also consider in mind It must contain contineous otherwise this Algo  willl not run e.g[33,44,53,77,89]
+// If given 1-N then apply Cyclic Sort like[20,24,23,22,21] ,[55,57,59,56,58]  also consider  in mind It must contain contineous range otherwise this Algo  will not run e.g[33,44,53,77,89]
 
 static void Cyclic(int arr[],int length);
 
