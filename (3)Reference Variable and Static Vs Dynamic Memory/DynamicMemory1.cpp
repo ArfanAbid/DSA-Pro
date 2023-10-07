@@ -33,7 +33,7 @@ int main(){
 
 
     // while(true){
-    //     int i=5;     --->>> Memory is allocated and delete each time loop is iterated. simply mwan in static memory is aitomatocallu release
+    //     int i=5;     --->>> Memory is allocated and delete each time loop is iterated. simply mean in static memory is automatically release
     // }
 
     // while(true){
