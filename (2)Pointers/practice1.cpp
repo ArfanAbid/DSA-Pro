@@ -1,3 +1,4 @@
+// Find sum of array  using pointers 
 #include<iostream>
 using namespace std;
                 
