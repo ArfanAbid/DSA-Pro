@@ -6,7 +6,7 @@ void update(int *p);
 void increment(int **p);
 
 int main(){  
-    /**/
+    
       // MCQ # 1
     
     /*int first=0;

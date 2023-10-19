@@ -37,7 +37,7 @@ int main(){
 // 	one byte = 4 bits so increased by 4 bits 
 	cout<<"After increment adress of t is : "<<t<<endl;// 0x79fe04 increased 4 bits
 	
-	
+	// ---->> Address is  represented in hexadecimal
 	
 	/* InterView Question:
 	   You have an int pointer with an initial value of p = 1000; and p+=5;  what is answer with proper explanation ?  :: When you execute p += 5;, it will add 5 times the size of an int to the address stored in p.  since adress is 1000 if we add 5 integer which is 4*5=20 bytes so its adress becomes 1020 
