@@ -45,7 +45,7 @@ void insertAtFirst(int data){
     node->next=head;
     head=node;
 
-    if(tail==nullptr){
+    if(tail==nullptr){  // for first element  i.e if there is no element is present then obviously tail is nullptr so when new nde id added it is head and also a tail
         tail=head; 
     }
     size++;
@@ -55,9 +55,9 @@ void insertAtFirst(int data){
 // Function to insert at Last or at tai 
 void insertAtLast(int data){
 
-    if(tail==nullptr){
+    if(tail==nullptr){    // LinkedList is empty
         insertAtFirst(data);
-        return;  //return because  dont  call/run below statement  and return/stop this function here
+        return;  //return because  don't  call/run below statement  and return/stop this function here
     }
     Node* node=new Node(data);
     tail->next=node;
