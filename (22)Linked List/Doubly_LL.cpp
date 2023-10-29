@@ -26,6 +26,16 @@ public:
         this->tail =nullptr;
         this->size =0;
     }
+
+    ~DoubleLinkedList() {    // best practice to avoid memory leak
+        Node* current = head;
+        while(current != nullptr) {
+        Node* temp = current;
+        current = current->next;
+        delete temp;
+    }
+}
+
                     // From here make all the functions you want
 
 
@@ -117,12 +127,14 @@ int deleteFirstNode() {
         return -1; 
     }
     int value = head->data;
+    Node* temp=head;
     head = head->next;
     if (head != nullptr) {
         head->prev = nullptr; 
     } else {
         tail = nullptr;
     }
+    delete temp;
     size--;
     return value;
 }
@@ -135,12 +147,14 @@ int deleteLastNode() {
         return -1; // Return a default value indicating failure
     }
     int value = tail->data;
+    Node* temp = tail;
     tail = tail->prev;
     if (tail != nullptr) {
         tail->next = nullptr; // Update the new tail node's next pointer
     } else {
         head = nullptr;
     }
+    delete temp;
     size--;
     return value;
 }
@@ -171,8 +185,10 @@ int deletePositionedNode(int index) {
 
     Node* current = get(index-1);
     int value = current->next->data;
+    Node *temp=current->next;
     current->next = current->next->next;
     current->next->prev = current; 
+    delete temp;
     size--;
 
     return value;

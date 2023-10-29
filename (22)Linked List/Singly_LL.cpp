@@ -27,7 +27,15 @@ public:
     }
                 // From here make all the functions you want
 
-
+    // Destructor                    // best practice to avoid memory leaks
+    ~LinkedList() {
+        Node* current = head;
+        while(current != nullptr) {
+            Node* temp = current;
+            current = current->next;
+            delete temp; 
+    }
+}
 //Function for displaying linkedList
 void display(){
     Node *temp= head;   // taking temp because otherwise it will change internal working of head  in this copy (temp) is set to head and moving one step forward
@@ -97,11 +105,13 @@ void insertAtPosition(int data,int index){
 
 //  Function to delete first node
 int deleteFirstNode(){
-    int value=head->data;
+    int value=head->data;  // if needed
+    Node* temp=head;
     head=head->next;
-    if(head==nullptr){ // if only one node is there
+    if(head==nullptr){ // if only one node is there 
         tail=nullptr;
     }
+    delete temp; // TO prevent memory leaks
     size--;
     return value; // if needed, if user want to display value  otherwisw no need
 
@@ -125,8 +135,10 @@ int deleteLastNode(){
     }
     Node* secondLastNode =get(size-2); // size -2 becaue in actual it is size -1 (if we think)  ,,,, but we see that this -2 means that if size is 5 it will move till 3 index and ->next will move one step forward also so it become 4 index (secondlast index) 
     int value = tail->data;
+    Node* temp =tail;
     tail=secondLastNode;
     tail->next=nullptr;
+    delete temp; //to avoid memory leak
     size--;
     return value;
 }
@@ -143,8 +155,9 @@ int deletePositionedNode(int index){
 
     Node* previous =get(index-1);
     int value=previous->next->data;
+    Node* temp=previous->next;
     previous->next=previous->next->next;
-
+    delete temp;
     return value;
 }
 
