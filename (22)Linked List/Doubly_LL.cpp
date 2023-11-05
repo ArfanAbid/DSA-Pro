@@ -112,7 +112,7 @@ void insertAtPosition(int data,int index){
     node->next=current->next;  
     node->prev=current;
     current->next=node;
-    current->next->prev=node;
+    node->next->prev=node;
 
 
     size++;
