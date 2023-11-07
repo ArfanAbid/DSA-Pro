@@ -7,9 +7,9 @@ using namespace std;
 class CustomStack{
 
     private:
-    static const int MAX_SIZE = 10;
-    int data[MAX_SIZE];
-    int top=-1;
+        static const int MAX_SIZE = 10;
+        int data[MAX_SIZE];
+        int top=-1;
 
     public:
         //Function to check  if a stack is full or not
