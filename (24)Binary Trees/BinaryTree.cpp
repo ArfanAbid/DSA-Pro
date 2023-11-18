@@ -67,6 +67,57 @@ public:
         display(node->right, indent + "\t");
     }
 
+
+
+
+
+
+                        // Types of Traversals
+
+// i) Pre ordered Travals
+void preOrder(){
+    preOrder(root);
+}
+
+void preOrder(Node* node){
+    if(node==NULL){
+        return;
+    }
+    cout<<node->value<<" ";
+    preOrder(node->left);
+    preOrder(node->right);
+}
+
+// ii) In Order Travals
+
+void inOrder(){
+    inOrder(root);
+}
+
+void inOrder(Node* node){
+    if(node==NULL){
+        return;
+    }
+    inOrder(node->left);
+    cout<<node->value<<" ";
+    inOrder(node->right);
+}
+
+// iii) Post Order Travals
+
+void postOrder(){
+    postOrder(root);
+}
+
+void postOrder(Node* node){
+    if(node==NULL){
+        return;
+    }
+    postOrder(node->left);
+    postOrder(node->right);
+    cout<<node->value<<" ";
+}
+
 };
 
 
