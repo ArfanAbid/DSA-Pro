@@ -37,7 +37,7 @@ public:
         }
         return node->height;
     }
-    // Function to check Balcnced or Not
+    // Function to check Balanced or Not
     bool balanced(Node * node){
         if(node==NULL){
             return true;
@@ -116,7 +116,7 @@ int main(){
     // int arr[]={5,2,7,1,4,6,9,8,3,10};
     // int size=10;
     // bst.insertArray(arr,size);
-    // bst.display();
+    // bst.display(); 
 
 
     int arr2[]={1,2,3,4,5,6,7,8,9,10};
