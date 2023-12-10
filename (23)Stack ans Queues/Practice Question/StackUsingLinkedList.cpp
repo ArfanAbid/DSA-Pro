@@ -88,3 +88,6 @@ int main(){
     cout<<"Stack is empty: "<< Stack.isEmpty();
 
 }
+
+
+// Best approach is insert at first(and make it top) and pop at first so here no need to traverse  to move till end inorder to pop element and can be done using one top pointer only
