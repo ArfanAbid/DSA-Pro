@@ -61,3 +61,29 @@ int main(){
 	cout<<k<<endl;
 	
 	}
+	
+	
+// using *p++;	
+	/*
+	
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[] = {10, 20, 30};
+    int *ptr = arr; // Pointer points to the first element of the array
+
+    cout << "Value before increment: " << *ptr << endl; // Outputs: Value before increment: 10
+    cout << "Value after increment: " << *ptr++ << endl; // Outputs: Value after increment: 10
+    cout << "Value after increment and ptr move: " << *ptr << endl; // Outputs: Value after increment and ptr move: 20
+
+    ptr = arr; // Reset pointer to point to the first element of the array again
+
+    cout << "Value before increment: " << *ptr << endl; // Outputs: Value before increment: 10
+    cout << "Value after increment: " << (*ptr)++ << endl; // Outputs: Value after increment: 10
+    cout << "Value after increment without ptr move: " << *ptr << endl; // Outputs: Value after increment without ptr move: 11
+
+    return 0;
+}
+
+	*?
