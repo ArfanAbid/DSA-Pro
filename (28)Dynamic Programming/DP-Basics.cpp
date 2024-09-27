@@ -73,3 +73,6 @@ when to use which DP Approach:
 
 -> Tabulation (Bottom-Up): Iteratively solves all subproblems without recursion, avoiding stack overflow and function call overhead. Ideal for problems where all subproblems are required.
 */
+
+
+// Note :In dynamic programming, we often increase the size of the array by one to simplify indexing and accommodate base cases directly at the appropriate indices. This approach helps avoid off-by-one errors and allows for easier access to the values needed to build up the solution iteratively.
